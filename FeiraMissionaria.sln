@@ -13,15 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{EDACB726-1308-4186-B6A3-E2EBFADBDC90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.Application", "src\FeiraMissionaria.Application\FeiraMissionaria.Application.csproj", "{E917B935-F080-4085-91CC-AC79C31F07DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeiraMissionaria.Application", "src\FeiraMissionaria.Application\FeiraMissionaria.Application.csproj", "{E917B935-F080-4085-91CC-AC79C31F07DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.Domain", "src\FeiraMissionaria.Domain\FeiraMissionaria.Domain.csproj", "{8008CF9C-996D-42D8-9D27-A9941D1675F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeiraMissionaria.Domain", "src\FeiraMissionaria.Domain\FeiraMissionaria.Domain.csproj", "{8008CF9C-996D-42D8-9D27-A9941D1675F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.Infrastructure", "src\FeiraMissionaria.Infrastructure\FeiraMissionaria.Infrastructure.csproj", "{2E8038E4-5A56-4CDC-BD6C-2E47E0DCE4C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeiraMissionaria.Infrastructure", "src\FeiraMissionaria.Infrastructure\FeiraMissionaria.Infrastructure.csproj", "{2E8038E4-5A56-4CDC-BD6C-2E47E0DCE4C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.Persistence", "src\FeiraMissionaria.Persistence\FeiraMissionaria.Persistence.csproj", "{BC7998B6-9527-4FAC-BD2A-578D544A35A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeiraMissionaria.Persistence", "src\FeiraMissionaria.Persistence\FeiraMissionaria.Persistence.csproj", "{BC7998B6-9527-4FAC-BD2A-578D544A35A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.WebApi", "src\FeiraMissionaria.WebApi\FeiraMissionaria.WebApi.csproj", "{0A7F141F-650C-41F8-8432-561E928AA5A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeiraMissionaria.WebApi", "src\FeiraMissionaria.WebApi\FeiraMissionaria.WebApi.csproj", "{0A7F141F-650C-41F8-8432-561E928AA5A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.CrossCutting", "src\FeiraMissionaria.CrossCutting\FeiraMissionaria.CrossCutting.csproj", "{64FEEE63-86C0-4F3B-91A8-5C0DFEABCEE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeiraMissionaria.WebApi.Core", "src\FeiraMissionaria.WebApi.Core\FeiraMissionaria.WebApi.Core.csproj", "{5CCB1C04-54FC-434C-AAFF-B0E6C30CFF9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{0A7F141F-650C-41F8-8432-561E928AA5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A7F141F-650C-41F8-8432-561E928AA5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A7F141F-650C-41F8-8432-561E928AA5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FEEE63-86C0-4F3B-91A8-5C0DFEABCEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FEEE63-86C0-4F3B-91A8-5C0DFEABCEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FEEE63-86C0-4F3B-91A8-5C0DFEABCEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FEEE63-86C0-4F3B-91A8-5C0DFEABCEE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CCB1C04-54FC-434C-AAFF-B0E6C30CFF9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CCB1C04-54FC-434C-AAFF-B0E6C30CFF9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CCB1C04-54FC-434C-AAFF-B0E6C30CFF9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CCB1C04-54FC-434C-AAFF-B0E6C30CFF9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +71,8 @@ Global
 		{2E8038E4-5A56-4CDC-BD6C-2E47E0DCE4C8} = {C23EC8BE-2ADF-4C3B-926E-6E82CBADFFBC}
 		{BC7998B6-9527-4FAC-BD2A-578D544A35A7} = {04229A5E-9F55-4A59-9A83-164103F66CC9}
 		{0A7F141F-650C-41F8-8432-561E928AA5A6} = {EDACB726-1308-4186-B6A3-E2EBFADBDC90}
+		{64FEEE63-86C0-4F3B-91A8-5C0DFEABCEE9} = {C23EC8BE-2ADF-4C3B-926E-6E82CBADFFBC}
+		{5CCB1C04-54FC-434C-AAFF-B0E6C30CFF9C} = {EDACB726-1308-4186-B6A3-E2EBFADBDC90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {968864C8-76D7-4523-B4F8-0E9443376E5D}
