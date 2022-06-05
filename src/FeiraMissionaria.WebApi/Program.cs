@@ -1,8 +1,14 @@
+using FeiraMissionaria.WebApi.Core.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddFeiraMissionariaDbContext(builder.Configuration);
+builder.Services.AddFeiraMissionariaIdentity();
+builder.Services.AddFeiraMissionariaAuthentication(builder.Configuration);
+builder.Services.AddFeiraMissionariaSwagger();
 
 var app = builder.Build();
 
@@ -15,6 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
