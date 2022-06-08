@@ -1,25 +1,34 @@
 ﻿using FeiraMissionaria.CrossCutting.Enums;
+using FeiraMissionaria.Domain.Entities;
 using FeiraMissionaria.Infrastructure.Audits;
 using FeiraMissionaria.Persistence.Events;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
 
 namespace FeiraMissionaria.Persistence.Contexts;
 public class FeiraMissionariaDbContext : IdentityDbContext<IdentityUser>
 {
     private readonly IHttpContextAccessor _httpContext;
+    private readonly IConfiguration _configuration;
 
-
-    public FeiraMissionariaDbContext(IHttpContextAccessor httpContext) : base()
+    public FeiraMissionariaDbContext(IConfiguration configuration, IHttpContextAccessor httpContext) : base()
     {
         _httpContext = httpContext;
+        _configuration = configuration;
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        optionsBuilder.UseSqlServer(
+                _configuration.GetConnectionString("DefaultConnection"), options =>
+                {
+                    options.EnableRetryOnFailure();
+                });
+
         base.OnConfiguring(optionsBuilder);
 
 #if DEBUG
@@ -33,6 +42,8 @@ public class FeiraMissionariaDbContext : IdentityDbContext<IdentityUser>
 
         builder.ApplyConfigurationsFromAssembly(typeof(FeiraMissionariaDbContext).Assembly);
     }
+
+    public virtual DbSet<Product> Products { get; set; }
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {

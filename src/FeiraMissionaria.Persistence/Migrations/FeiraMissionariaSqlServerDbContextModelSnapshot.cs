@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FeiraMissionaria.Persistence.Migrations
 {
-    [DbContext(typeof(FeiraMissionariaSqlServerDbContext))]
+    [DbContext(typeof(FeiraMissionariaDbContext))]
     partial class FeiraMissionariaSqlServerDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

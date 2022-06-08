@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FeiraMissionaria.WebApi.Core\FeiraMissionaria.WebApi.Core.csproj" />
   </ItemGroup>
 

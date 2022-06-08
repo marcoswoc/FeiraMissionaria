@@ -4,11 +4,10 @@ using System.Linq.Expressions;
 namespace FeiraMissionaria.Domain.Repositories.Base;
 public interface IRepository<TEntity> where TEntity : IEntity
 {
-
-    Task UpdateAsync(TEntity entity);
-    Task DeleteAsync(Guid Id);
     Task<TEntity> CreateAsync(TEntity entity);
+    Task UpdateAsync(TEntity entity);
     Task<TEntity?> GetByIdAsync(Guid Id);
+    Task<IEnumerable<TEntity>> GetAllAsync();
     Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> expression);
-    Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> expression);
+    Task DeleteAsync(Guid Id);
 }

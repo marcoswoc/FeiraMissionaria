@@ -46,9 +46,9 @@ public abstract class RepositoryBase<TEntity> : IRepository<TEntity>
         return await _context.Set<TEntity>().FirstOrDefaultAsync(expression);
     }
 
-    public virtual async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> expression)
+    public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
     {
-        return await _context.Set<TEntity>().Where(expression).ToListAsync();
+        return await _context.Set<TEntity>().ToListAsync();
     }
 
     public virtual async Task<TEntity?> GetByIdAsync(Guid Id)

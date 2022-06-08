@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FeiraMissionaria.Persistence.Migrations
 {
-    [DbContext(typeof(FeiraMissionariaSqlServerDbContext))]
+    [DbContext(typeof(FeiraMissionariaDbContext))]
     [Migration("20220605014038_Initial")]
     partial class Initial
     {

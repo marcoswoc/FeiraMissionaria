@@ -11,6 +11,7 @@ builder.Services.AddFeiraMissionariaAuthentication(builder.Configuration);
 builder.Services.AddFeiraMissionariaSwagger();
 builder.Services.AddFeiraMissionariaRepositories();
 builder.Services.AddFeiraMissionariaAutomapper();
+builder.Services.AddFeiraMissionariaApplications();
 
 var app = builder.Build();
 
