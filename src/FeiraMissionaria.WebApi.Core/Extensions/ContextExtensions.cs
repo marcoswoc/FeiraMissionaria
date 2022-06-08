@@ -1,4 +1,6 @@
-﻿using FeiraMissionaria.Persistence.Contexts;
+﻿using FeiraMissionaria.Domain.Repositories;
+using FeiraMissionaria.Persistence.Contexts;
+using FeiraMissionaria.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,5 +22,10 @@ public static class ContextExtensions
         services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<FeiraMissionariaDbContext>()
             .AddDefaultTokenProviders();
+    }
+
+    public static void AddFeiraMissionariaRepositories(this IServiceCollection service)
+    {
+        service.AddScoped<IProductRepository, ProductRepository<FeiraMissionariaDbContext>>();
     }
 }

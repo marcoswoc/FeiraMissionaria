@@ -1,4 +1,4 @@
-﻿namespace FeiraMissionaria.Infrastructure.Interfaces;
+﻿namespace FeiraMissionaria.Domain.Entities.Base;
 public interface IAuditable
 {
     DateTime? CreatedAt { get; set; }

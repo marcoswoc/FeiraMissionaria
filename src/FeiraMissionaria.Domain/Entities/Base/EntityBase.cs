@@ -1,7 +1,6 @@
-﻿using FeiraMissionaria.Infrastructure.Interfaces;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace FeiraMissionaria.Infrastructure.Models;
+namespace FeiraMissionaria.Domain.Entities.Base;
 public abstract class EntityBase : IEntity, IAuditable
 {
     [Key]

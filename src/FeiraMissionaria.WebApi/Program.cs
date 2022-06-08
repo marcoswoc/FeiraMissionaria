@@ -9,6 +9,8 @@ builder.Services.AddFeiraMissionariaDbContext(builder.Configuration);
 builder.Services.AddFeiraMissionariaIdentity();
 builder.Services.AddFeiraMissionariaAuthentication(builder.Configuration);
 builder.Services.AddFeiraMissionariaSwagger();
+builder.Services.AddFeiraMissionariaRepositories();
+builder.Services.AddFeiraMissionariaAutomapper();
 
 var app = builder.Build();
 

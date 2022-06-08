@@ -1,5 +1,5 @@
 ﻿using FeiraMissionaria.CrossCutting.Enums;
-using FeiraMissionaria.Infrastructure.Interfaces;
+using FeiraMissionaria.Domain.Entities.Base;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Text.Json;
 

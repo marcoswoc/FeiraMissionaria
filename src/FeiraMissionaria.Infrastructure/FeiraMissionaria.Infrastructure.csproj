@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FeiraMissionaria.CrossCutting\FeiraMissionaria.CrossCutting.csproj" />
+    <ProjectReference Include="..\FeiraMissionaria.Domain\FeiraMissionaria.Domain.csproj" />
   </ItemGroup>
 
 </Project>

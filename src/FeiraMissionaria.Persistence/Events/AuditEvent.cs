@@ -1,4 +1,4 @@
-﻿using FeiraMissionaria.Infrastructure.Interfaces;
+﻿using FeiraMissionaria.Domain.Entities.Base;
 using Microsoft.EntityFrameworkCore;
 
 namespace FeiraMissionaria.Persistence.Events;
@@ -6,11 +6,11 @@ public static class AuditEvent
 {
     public static void SavingChanges(object sender, EventArgs eventArgs = null)
     {
-        if (!(sender is DbContext context)) return;
+        if (sender is not DbContext context) return;
 
         foreach (var entrie in context.ChangeTracker.Entries())
         {
-            if (!(entrie.Entity is IAuditable auditable))
+            if (entrie.Entity is not IAuditable auditable)
                 continue;
 
             if (entrie.State == EntityState.Added || entrie.State == EntityState.Detached)
